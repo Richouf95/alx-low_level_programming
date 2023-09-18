@@ -22,9 +22,9 @@ int main(void)
 			sum += (password[x] + '0');
 			putchar(password[x] + '0');
 
-			if ((2272 - sum) - '0' < 78)
+			if ((2772 - sum) - '0' < 78)
 			{
-				y = 2272 - sum - '0';
+				y = 2772 - sum - '0';
 				sum += y;
 				putchar(y + '0');
 				break;
