@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - sum of two diagonals of a squre matix
@@ -23,5 +24,5 @@ void print_diagsums(int *a, int size)
 		y = y + a[z * size + (size - z - 1)];
 	}
 
-	printf("%d,%d\n", x, y);
+	printf("%d, %d\n", x, y);
 }
