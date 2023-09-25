@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_memcpy - copies memory erea
+ * _memcpy - copies memory erea
  * @dest: input
  * @src: input
  * @n: input
