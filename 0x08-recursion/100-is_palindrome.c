@@ -42,7 +42,7 @@ int check(char *s, int x, int sLength)
 		return (0);
 
 	if (x >= sLength)
-		return (0);
+		return (1);
 
 	return (check(s, x + 1, sLength - 1));
 }
