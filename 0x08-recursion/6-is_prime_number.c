@@ -29,5 +29,5 @@ int the_prime(int n, int x)
 	if (n % x == 0 && x > 0)
 		return (0);
 
-	return (theprime(n, x - 1));
+	return (the_prime(n, x - 1));
 }
