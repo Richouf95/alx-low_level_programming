@@ -4,7 +4,7 @@
  * _pow_recursion - calcul power
  * @x: input
  * @y: input
- * Return: -1 if y < 0. otherwise 0
+ * Return: output
 */
 
 int _pow_recursion(int x, int y)
