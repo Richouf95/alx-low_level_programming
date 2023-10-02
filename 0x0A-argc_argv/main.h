@@ -1,6 +1,7 @@
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
-	_putchar(char c);
+int _putchar(char c);
+int _atoi(char *s);
 
 #endif
