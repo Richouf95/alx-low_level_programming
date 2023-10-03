@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int counter;
 
-	int number = atoi(argv[i]);
+	int number = atoi(argv[1]);
 
 	int result = 0;
 
