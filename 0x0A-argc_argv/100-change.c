@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	if (num < 0)
+	if (number < 0)
 	{
 		printf("0\n");
 		return (0);
