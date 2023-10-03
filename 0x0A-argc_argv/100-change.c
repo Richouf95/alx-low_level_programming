@@ -25,6 +25,12 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
+	if (num < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
 	for (counter = 0; counter < 5 && number >= 0; counter++)
 	{
 		while (number >= coins[counter])
