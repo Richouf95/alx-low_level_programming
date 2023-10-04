@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 		{
 			while (x >= 0)
 			{
-				free(newlyArray[x];
+				free(newlyArray[x]);
 				x--;
 			}
 
