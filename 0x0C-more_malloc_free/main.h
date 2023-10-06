@@ -9,5 +9,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _putchar(char c);
 int isDigit(char *str);
 int stringLength(char *str);
+char *_memset(char *s, char b, unsigned int n);
 
 #endif

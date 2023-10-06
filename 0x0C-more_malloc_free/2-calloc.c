@@ -10,8 +10,6 @@
  * Return: pointer to the memory area s
  */
 
-char *_memset(char *s, char b, unsigned int n);
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
@@ -44,7 +42,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (myArray == NULL)
 		return (NULL);
 
-	_memse(myArray, 0, nmemb * size);
+	_memset(myArray, 0, nmemb * size);
 
 	return (myArray);
 }
