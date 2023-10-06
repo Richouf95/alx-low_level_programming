@@ -11,38 +11,35 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *newlyString;
-	unsigned int i, j = 0, k = 0, s1Length = 0, s2Length = 0;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-	for (i = 0; s1[i]; i++)
-		s1Length++;
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	for (i = 0; s2[i]; i++)
-		s2Length++;
-
-	newlyString = malloc(sizeof(char) + (s1Length + s2Length + 1));
-	if (newlyString == NULL)
+	if (!s)
 		return (NULL);
 
-	while (s1[j] != '\0')
+	while (i < len1)
 	{
-		newlyString[j] = s1[j];
-		j++;
+		s[i] = s1[i];
+		i++;
 	}
 
-	while (s2[k] != '\0')
-	{
-		newlyString[j] = s2[k];
-		j++;
-		k++;
-		if (n < s2Length && k == n)
-			break;
-	}
-	newlyString[j] = '\0';
-	return (newlyString);
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
+
+	s[i] = '\0';
+
+	return (s);
 }
+
