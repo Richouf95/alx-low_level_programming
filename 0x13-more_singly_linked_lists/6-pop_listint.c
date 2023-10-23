@@ -14,11 +14,6 @@ int pop_listint(listint_t **head)
 	if (head == NULL || *head == NULL)
 		return (0);
 
-	nextItems = malloc(sizeof(*nextItems));
-
-	if (nextItems == NULL)
-		return (-1);
-
 	nextItems = (*head)->next;
 	nodeData = (*head)->n;
 	free(*head);
