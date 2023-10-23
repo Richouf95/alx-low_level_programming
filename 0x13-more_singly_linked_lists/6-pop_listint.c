@@ -11,13 +11,13 @@ int pop_listint(listint_t **head)
 	listint_t *nextItems;
 	int nodeData;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
 
 	nextItems = malloc(sizeof(*nextItems));
 
 	if (nextItems == NULL)
-		exit(EXIT_FAILURE);
+		return (-1);
 
 	nextItems = (*head)->next;
 	nodeData = (*head)->n;
