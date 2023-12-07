@@ -22,12 +22,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	node->prev = NULL;
 
 	if (tmp == NULL)
-	{
-		/*tmp = malloc(sizeof(*tmp));
-		if (tmp == NULL)
-			return (NULL);*/
 		tmp = node;
-	}
 	else
 	{
 		tmp->prev = node;
