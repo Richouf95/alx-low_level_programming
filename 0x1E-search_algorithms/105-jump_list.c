@@ -10,7 +10,7 @@
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t *node, *target;
-	size_t ste = 0, stepSize = sqrt(size);
+	size_t step = 0, stepSize = sqrt(size);
 
 	if (list == NULL || size == 0)
 		return (NULL);
