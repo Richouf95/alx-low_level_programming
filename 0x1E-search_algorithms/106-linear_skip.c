@@ -19,17 +19,18 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	{
 		node = target;
 
-		if (target->express)
+		if (target->express != NULL)
+		{
+			target = target->express;
+			printf("Value checked at index [%ld] = [%d]\n",
+					target->index, target->n);
+		}
+		else
 		{
 			while (target->next != NULL)
 				target = target->next;
 		}
-		else
-		{
-			target = target->express;
-			printf("Value checked at index [%ld] = [%d]\n", target->index,
-					target->n);
-		}
+		
 	}
 
 	printf("Value found between indexes [%ld] and [%ld]\n",
